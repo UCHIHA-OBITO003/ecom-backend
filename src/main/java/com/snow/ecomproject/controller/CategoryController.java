@@ -9,7 +9,7 @@ import com.snow.ecomproject.repository.CategoryRepository;
 
 @RestController
 @RequestMapping("/api/categories")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "*")
 public class CategoryController {
 
     @Autowired

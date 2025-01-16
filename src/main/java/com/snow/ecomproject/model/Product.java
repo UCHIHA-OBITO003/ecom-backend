@@ -1,8 +1,10 @@
+// src/main/java/com/snow/ecomproject/model/Product.java
+
 package com.snow.ecomproject.model;
 
-import lombok.Data;
-import jakarta.persistence.*;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.persistence.*;
+import lombok.Data;
 
 @Entity
 @Data
@@ -25,10 +27,11 @@ public class Product {
     @JsonProperty("discountedPrice")
     private double discountedPrice;
 
+    @JsonProperty("thumbnailUrl")
+    private String thumbnailUrl;
 
-
-    @JsonProperty("category")
     @ManyToOne
     @JoinColumn(name = "category_id", referencedColumnName = "categoryId")
+    @JsonProperty("category")
     private Category category;
 }
